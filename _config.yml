@@ -1,7 +1,7 @@
 # Site settings
-title: Just Do It
-email: 549974268@qq.com
-description: 姜斌的博客
+title: ma hua
+email: 413932965@qq.com
+description: 文涛的博客
 # > # this means to ignore newlines until "baseurl:"
 #   Write an awesome description for your new site here. You can edit this
 #   line in _config.yml. It will appear in your document head meta (for
@@ -10,17 +10,17 @@ description: 姜斌的博客
 # baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
-github_username: lizijin
+github_username: mahuafactory
 permalink: /:year/:month/:day/:title/
 # this is the url root of the view source link on the footer page.
-viewsourceroot: https://github.com/lizijin/lizijin.github.io/blob/master/
+viewsourceroot: https://github.com/mahuafactory/mahuafactory.github.io/blob/master/
 # this is the url root of the create page link on the footer page.
-newsourceroot: https://github.com/lizijin/lizijin.github.io/new/master
+newsourceroot: https://github.com/mahuafactory/mahuafactory.github.io/new/master
 #########################################
 # for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com.
 # disqus.com commenting system. please note that it is exclusive with duoshuo.com
-disqus_shortname: lizijin
-disqus_url: "http://lizijin.github.io"
+disqus_shortname: mahuafactory
+disqus_url: "http://mahuafactory.github.io"
 #########################################
 
 # Build settings
