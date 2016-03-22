@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Just Do It</title>
+    <description>姜斌的博客</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 19 Mar 2016 21:26:08 +0800</pubDate>
+    <lastBuildDate>Sat, 19 Mar 2016 21:26:08 +0800</lastBuildDate>
+    <generator>Jekyll v3.0.3</generator>
+    
+      <item>
+        <title>每周选股第一期</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;免责声明&lt;/h2&gt;
+&lt;p&gt;本人投资小白,不保证文中的观点能够符合当时及以后的股市走势,不承诺盈利,也不承担亏损,文中所有选股仅为自己投资股票做参考。请各位看官谨慎投资，切勿盲目跟从。&lt;/p&gt;
+
+&lt;h3 id=&quot;hk&quot;&gt;1.	中国电子00085.HK&lt;/h3&gt;
+&lt;p&gt;周线MACD于3月18号将形成金叉，日成交方面加量齐升。(不知下周是否会有调整,以待考证),回踩20日均线2.365买入
+&lt;img src=&quot;/icons/2016-03-19-0085.png&quot; alt=&quot;Mou icon&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hk-1&quot;&gt;2.	酷派集团02369.HK&lt;/h3&gt;
+&lt;p&gt;周线MACD形成金叉,成交量放大 股价升14%(感觉肯定会有调整)
+&lt;img src=&quot;/icons/2016-03-19-02369.png&quot; alt=&quot;Mou icon&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hk-2&quot;&gt;3.	慧聪网02280.HK&lt;/h3&gt;
+&lt;p&gt;成交量放大,股价创周期内新高,股价在上升趋势中(是只好票)
+&lt;img src=&quot;/icons/2016-03-19-02280.png&quot; alt=&quot;Mou icon&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hk-3&quot;&gt;4.	国美电器00493.HK&lt;/h3&gt;
+&lt;p&gt;国美电器关注了很久,感觉只能短线持有,股价不会有太大的惊喜,现在周线形成金叉也许是买入的好时机
+&lt;img src=&quot;/icons/2016-03-19-00493.png&quot; alt=&quot;Mou icon&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;igg00799hk&quot;&gt;5.	IGG00799.HK&lt;/h3&gt;
+&lt;p&gt;3.55买入
+&lt;img src=&quot;/icons/2016-03-19-00799.png&quot; alt=&quot;Mou icon&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hk-4&quot;&gt;6.	天鸽互动01980.HK&lt;/h3&gt;
+&lt;p&gt;上升趋势 日线形成十字星,成交量小(应该没问题吧)
+&lt;img src=&quot;/icons/2016-03-19-01980.png&quot; alt=&quot;Mou icon&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;派息相关股票&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;公司&lt;/td&gt;
+      &lt;td&gt;公布日期&lt;/td&gt;
+      &lt;td&gt;年度/截至&lt;/td&gt;
+      &lt;td&gt;派息事项&lt;/td&gt;
+      &lt;td&gt;派息内容&lt;/td&gt;
+      &lt;td&gt;方式&lt;/td&gt;
+      &lt;td&gt;除净日&lt;/td&gt;
+      &lt;td&gt;截止过户日期&lt;/td&gt;
+      &lt;td&gt;派息日&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;中国利郎&lt;/td&gt;
+      &lt;td&gt;2016/03/09&lt;/td&gt;
+      &lt;td&gt;2015/12&lt;/td&gt;
+      &lt;td&gt;末期业绩&lt;/td&gt;
+      &lt;td&gt;港元 0.1700&lt;/td&gt;
+      &lt;td&gt;现金&lt;/td&gt;
+      &lt;td&gt;2016/04/21&lt;/td&gt;
+      &lt;td&gt;2016/04/25-2016/04/27&lt;/td&gt;
+      &lt;td&gt;2016/05/10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;中国利郎&lt;/td&gt;
+      &lt;td&gt;2016/03/09&lt;/td&gt;
+      &lt;td&gt;2015/12&lt;/td&gt;
+      &lt;td&gt;末期业绩&lt;/td&gt;
+      &lt;td&gt;港元 0.0700&lt;/td&gt;
+      &lt;td&gt;现金&lt;/td&gt;
+      &lt;td&gt;2016/04/21&lt;/td&gt;
+      &lt;td&gt;2016/04/25-2016/04/27&lt;/td&gt;
+      &lt;td&gt;2016/05/10&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        <pubDate>Sat, 19 Mar 2016 00:00:00 +0800</pubDate>
+        <link>/2016/03/19/%E6%AF%8F%E5%91%A8%E9%80%89%E8%82%A1%E7%AC%AC%E4%B8%80%E6%9C%9F/</link>
+        <guid isPermaLink="true">/2016/03/19/%E6%AF%8F%E5%91%A8%E9%80%89%E8%82%A1%E7%AC%AC%E4%B8%80%E6%9C%9F/</guid>
+        
+        
+        <category>股票</category>
+        
+      </item>
+    
+      <item>
+        <title>Rxjava And Lambda</title>
+        <description>&lt;p&gt;本文大部分代码基于&lt;a href=&quot;http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html?from=timeline&amp;amp;isappinstalled=0&quot;&gt;lambdaexpressions&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;写在前面的话&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;本文只讲Lambda语法,不会涉及到API讲解,也不会涉及到RxJava原理介绍。个人感觉Lambda表达式是RxJava的基础,只有明白Lambda表达式才能理解RxJava的一些函数的含义。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;大概是在一年前知道&lt;a href=&quot;https://github.com/ReactiveX/RxJava&quot;&gt;RxJava&lt;/a&gt;项目,于是兴致勃勃的上网去搜索各种关于RxJava的各种教程。当看到类似下面的代码时,总感觉跟平常写的代码有些不一样,感觉除了Builder模式一般不会出现这么多的函数串联调用。但是又不是Builder模式实在是有点费解。仔细看有Func1 Action1这样的接口类,实在是费解如此命名下的类的含义,为何如此大名鼎鼎的框架会违背Java命名规范？&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Observable.create(new Observable.OnSubscribe&amp;lt;String&amp;gt;() {
+    @Override
+    public void call(Subscriber&amp;lt;? super String&amp;gt; subscriber) {
+        subscriber.onNext(&quot;HelloWorld&quot;);
+    }
+}).map(new Func1&amp;lt;String, String&amp;gt;() {
+    @Override
+    public String call(String s) {
+        return s+&quot; From Jiangbin&quot;;
+    }
+}).subscribe(new Action1&amp;lt;String&amp;gt;() {
+    @Override
+    public void call(String s) {
+        System.out.println(s);
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;之后由于时间精力有限,也就没有再深入学习RxJava。但是RxJava的一些疑问点还是一直存留在脑海中。不明白的始终还是不明白。直到有一天看到了一篇关于&lt;a href=&quot;http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html?from=timeline&amp;amp;isappinstalled=0&quot;&gt;Lambda&lt;/a&gt;的文章。才豁然开朗,然后再对RxJava二进宫。果然事半功倍,很快就掌握了RxJava基础。所以Lambda是RxJava的基础是成立的。&lt;/p&gt;
+
+&lt;p&gt;那么什么是Lambda表达式呢？&lt;/p&gt;
+
+&lt;p&gt;我们在写Android程序或者GUI程序时,按钮的点击事件代码是信手拈来&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Button clickButton = 初始化button;
+clickButton.setOnClickListener(new OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        System.out.println(&quot;你点击了按钮&quot;);
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Java8加入了对Lambda表达式的支持,上面代码的Lambda表达式为&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Button clickButton = 初始化button;
+clickButton.setOnClickListener((View v)-&amp;gt;System.out.println(&quot;你点击了按钮&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Lambda表达式是多么的简洁原本七行的代码用两行代码就轻轻松松搞定.(View v)可以将类型省略掉,因为v类型可以自动推倒&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Button clickButton = 初始化button;
+clickButton.setOnClickListener((View v)-&amp;gt;System.out.println(&quot;你点击了按钮&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;上述Lamda是Android内置的函数,那么我们如何编写属于自己的Lambda表达式下面我们将通过一个实例来一步步讲解&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;假设我们有一个Person类,定义如下
+public  class Person{
+    public enum Sex{
+        MALE,FEMALE
+    }
+    String name;
+    LocalDate birthday;
+    Sex gender;
+    String emailAddress;
+    
+    public int getAge(){
+        // ...
+    }
+    
+    //打印Person的信息
+    public void printPerson(){
+        // ...
+    }
+} 现在我们有一个Person的集合List&amp;lt;Person&amp;gt; roster。我们要在roster中打印出符合某些条件的Person的信息有如下场景
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;1.打印出年纪大于18岁的人的信息,我们可能会编写如下代码&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//函数定义
+public static void printPersonOlderThan(List&amp;lt;Person&amp;gt; roster,int age){
+    for(Person p:roster){
+        if(p.getAge()&amp;gt;age){
+            p.printPerson();
+        }
+    }
+}
+//函数调用
+List&amp;lt;Person&amp;gt; roster = ...;
+printPersonOlder(roster,18);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;2.打印出18到25岁的人的信息,然后我们添加一个方法&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//函数定义
+public static void printPersonsWithinAgeRange(List&amp;lt;Person&amp;gt; roster, int low, int high){
+    for (Person p : roster) {
+        if (low &amp;lt;= p.getAge() &amp;amp;&amp;amp; p.getAge() &amp;lt; high) {
+            p.printPerson();
+        }
+    }
+}
+//函数调用
+List&amp;lt;Person&amp;gt; roster = ...;
+printPersonsWithinAgeRange(roster,18，25);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;3.通过前面两个例子我们发现如果需要查找符合新的条件的人的信息时就需要添加新的方法。于是我们决定使用接口来做判断&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public static void printPersons(
+    List&amp;lt;Person&amp;gt; roster, CheckPerson tester) {
+        for (Person p : roster) {
+            if (tester.test(p)) {
+                p.printPerson();
+            }
+    }
+}
+//定义接口
+interface CheckPerson {
+    boolean test(Person p);
+}   
+//寻找18岁到25之间的男性
+class CheckPersonEligibleForSelectiveService implements CheckPerson {
+    public boolean test(Person p) {
+        return p.gender == Person.Sex.MALE &amp;amp;&amp;amp;
+            p.getAge() &amp;gt;= 18 &amp;amp;&amp;amp;
+            p.getAge() &amp;lt;= 25;
+     }
+}
+//具体调用
+printPersons(roster, new CheckPersonEligibleForSelectiveService());
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;4. 使用匿名内部类&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;printPersons(roster, new CheckPersonEligibleForSelectiveService());
+#等价于
+printPersons(roster,new CheckPerson() {
+    public boolean test(Person p) {
+        return p.getGender() == Person.Sex.MALE
+            &amp;amp;&amp;amp; p.getAge() &amp;gt;= 18
+            &amp;amp;&amp;amp; p.getAge() &amp;lt;= 25;
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;lambda&quot;&gt;5.使用Lambda表达式&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;printPersons(
+    roster,
+    (Person p) -&amp;gt; p.getGender() == Person.Sex.MALE
+                  &amp;amp;&amp;amp; p.getAge() &amp;gt;= 18
+                  &amp;amp;&amp;amp; p.getAge() &amp;lt;= 25
+);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;predicate&quot;&gt;6.使用更通用的Predicate&lt;/h2&gt;
+
+&lt;p&gt;假设我们现在有个Teacher类,我们也需要根据一些条件打印Teacher的一些信息。我们可能会定义一个接口&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//定义接口
+interface CheckTeacher {
+    boolean test(Teacher t);
+} 其实我们发现CheckTeacher和CheckPerson的定义其实完全一样,完全可以用泛型定义成一个接口。所以Java类库考虑到这点定义了Predicate
+
+interface Predicate&amp;lt;T&amp;gt; {
+    boolean test(T t);
+} 于是函数定义变成了
+
+public static void printPersonsWithPredicate(List&amp;lt;Person&amp;gt; roster, Predicate&amp;lt;Person&amp;gt; tester) {
+    for (Person p : roster) {
+        if (tester.test(p)) {
+             p.printPerson();
+        }
+    }
+} 函数调用依然不变
+
+printPersonsWithPredicate(
+    roster,
+    p -&amp;gt; p.getGender() == Person.Sex.MALE
+        &amp;amp;&amp;amp; p.getAge() &amp;gt;= 18
+        &amp;amp;&amp;amp; p.getAge() &amp;lt;= 25
+);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;comsumercomsumer&quot;&gt;7.使用Comsumer,Comsumer源码如下&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@FunctionalInterface
+public interface Consumer&amp;lt;T&amp;gt; {
+    /**
+     * Performs this operation on the given argument.
+     *
+     * @param t the input argument
+     */
+    void accept(T t);
+    /**
+     * Returns a composed {@code Consumer} that performs, in sequence, this
+     * operation followed by the {@code after} operation. If performing either
+     * operation throws an exception, it is relayed to the caller of the
+     * composed operation.  If performing this operation throws an exception,
+     * the {@code after} operation will not be performed.
+     *
+     * @param after the operation to perform after this operation
+     * @return a composed {@code Consumer} that performs in sequence this
+     * operation followed by the {@code after} operation
+     * @throws NullPointerException if {@code after} is null
+     */
+    default Consumer&amp;lt;T&amp;gt; andThen(Consumer&amp;lt;? super T&amp;gt; after) {
+        Objects.requireNonNull(after);
+        return (T t) -&amp;gt; { accept(t); after.accept(t); };
+    }
+} 接下来我们重新定义printPersons方法
+
+//注意我们这里不在是printPersons 因为通过使用Consume我们可以在查找到符合条件的对象后我们可以自定义如何处理这些对象
+//我们不仅仅局限于打印出这些人的信息这样一个动作了
+public static void processPersons(List&amp;lt;Person&amp;gt; roster,Predicate&amp;lt;Person&amp;gt; tester, Consumer&amp;lt;Person&amp;gt; block) {
+    for (Person p : roster) {
+        if (tester.test(p)) {
+            block.accept(p);
+        }
+    }
+}
+//调用如下
+List&amp;lt;Person&amp;gt; roster = ...;
+processPerson(roster,//第一个参数
+              (Person p)-&amp;gt;{p.getAge()&amp;gt;18;},//第二个参数
+              (Person p)-&amp;gt;{//第三个参数
+                            p.printPerson();
+                            System.out.println(&quot;还可以做任何额外&quot;)
+                            }
+            );
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;personemail&quot;&gt;8.上面的例子都是打印Person的全部信息,那如果我只想打印出符合条件的人的Email该怎么办,有两种办法&lt;/h2&gt;
+&lt;p&gt;第一种 直接将7中的最后一个参数改成 (Person p)-&amp;gt;System.out.println(p.getEmailAddress())
+第二种 在block.accept(p) 想办法将p 变成String&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (tester.test(p)) {
+   //在这里我们应该想办法获取到p的Email
+    block.accept(p);
+ }
+ 将这些改成
+ if (tester.test(p)) {
+    String email = p.getEmailAddress();
+    block.accept(email);
+ }
+ 但是如果都是这样写的话那么代码的侵入性太强了,Java提供了Function&amp;lt;T,R&amp;gt;接口用来转换,跟RxJava的map方法是不是有点像
+ 完整定义如下
+ public static &amp;lt;X, Y&amp;gt; void processElements(Iterable&amp;lt;X&amp;gt; source,Predicate&amp;lt;X&amp;gt; tester,Function &amp;lt;X, Y&amp;gt; mapper,
+                                                Consumer&amp;lt;Y&amp;gt; block) {
+    for (X p : source) {
+        if (tester.test(p)) {
+            Y data = mapper.apply(p);
+            block.accept(data);
+        }
+     }
+} 
+调用如下
+processElements(roster,//第一个参数
+                (Person p)-&amp;gt;p.getAge()&amp;gt;18,//第二个参数
+                (Persion p)-&amp;gt;p.getEmailAddress(),//第三个参数,此时已经将Person转换成String了
+                (String s)-&amp;gt;System.out.println(s),//第四个参数,s的类型已经转换成String了
+                );
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;javastream&quot;&gt;9.进一步精简。上述我们发现函数式编程会导致有很多匿名内部对象作为参数,代码可读性不强,容易出错误。Java通过Stream解决这一个问题&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;roster
+    .stream()
+    .filter(p-&amp;gt;p.getAge()&amp;gt;18)//等价于8中的第二个参数
+    .map(p-&amp;gt;p.getEmailAddress())//等价于8中的第三个参数
+    .forEach(email-&amp;gt;System.out.println(email));//等价于8中的第四个参数
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;我们最终看一个RxJava的例子,读者可以对比例子9&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Integer[] list = {1,2,3,4,5};
+Observable
+    .from(list)
+    .filter(integer-&amp;gt;integer%2==0)//挑选出偶数
+    .map(integer -&amp;gt; &quot;number is&quot;+integer)//转换成String
+    .subscribe(s-&amp;gt;System.out.println(s));//相当于forEach(s-&amp;gt;System.out.println(s));
+    //forEach是同步的 subscribe是异步的
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;section-5&quot;&gt;总结&lt;/h1&gt;
+&lt;p&gt;第一次写文章,不对之处望指正&lt;/p&gt;
+</description>
+        <pubDate>Sat, 19 Mar 2016 00:00:00 +0800</pubDate>
+        <link>/2016/03/19/RxJava-And-Lambda/</link>
+        <guid isPermaLink="true">/2016/03/19/RxJava-And-Lambda/</guid>
+        
+        
+        <category>RxJava</category>
+        
+      </item>
+    
+  </channel>
+</rss>

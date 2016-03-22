@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rxjava And Lambda</title>
+	<meta name="description" content="本文大部分代码基于lambdaexpressions">
+	
+	<link rel="canonical" href="/2016/03/19/RxJava-And-Lambda/">
+	<link rel="alternate" type="application/rss+xml" title="Just Do It" href="/feed.xml" />
+	
+	<!-- <link rel="stylesheet" href="/css/main.css"> -->
+    
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+	<script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/monokai_sublime.min.css">
+	<script type="text/javascript" src="/static/js/highlight.min.js"></script>
+
+    <!--
+    <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/highlight.js/8.4/highlight.min.js"></script>
+    -->
+    
+	<script type="text/javascript" src="/static/js/index.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+ <!--  <body data-spy="scroll" data-target="#myAffix"> -->
+  <body>
+
+    <header>
+
+<!-- navbar -->
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Just Do It</a>
+      <p class="navbar-text"></p>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+
+        
+          <li>
+        
+        <a href="/">Home</a></li>
+
+        <li> <a class="newpost" href="javascript:;">New post</span>
+</li>
+
+        
+          
+        
+          
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+</header>
+
+
+    <div id="main" class="container main">
+      <div class="row">
+  <div id="myArticle" class="col-sm-9">
+    <div class="post-area post">
+      <header>
+        <h1>Rxjava And Lambda</h1>
+        <p>Mar 19, 2016</p>
+      </header>
+      <hr>
+      <article>
+        <p>本文大部分代码基于<a href="http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html?from=timeline&amp;isappinstalled=0">lambdaexpressions</a></p>
+
+<h1 id="section">写在前面的话</h1>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>本文只讲Lambda语法,不会涉及到API讲解,也不会涉及到RxJava原理介绍。个人感觉Lambda表达式是RxJava的基础,只有明白Lambda表达式才能理解RxJava的一些函数的含义。
+</code></pre>
+</div>
+
+<p>大概是在一年前知道<a href="https://github.com/ReactiveX/RxJava">RxJava</a>项目,于是兴致勃勃的上网去搜索各种关于RxJava的各种教程。当看到类似下面的代码时,总感觉跟平常写的代码有些不一样,感觉除了Builder模式一般不会出现这么多的函数串联调用。但是又不是Builder模式实在是有点费解。仔细看有Func1 Action1这样的接口类,实在是费解如此命名下的类的含义,为何如此大名鼎鼎的框架会违背Java命名规范？</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Observable.create(new Observable.OnSubscribe&lt;String&gt;() {
+    @Override
+    public void call(Subscriber&lt;? super String&gt; subscriber) {
+        subscriber.onNext("HelloWorld");
+    }
+}).map(new Func1&lt;String, String&gt;() {
+    @Override
+    public String call(String s) {
+        return s+" From Jiangbin";
+    }
+}).subscribe(new Action1&lt;String&gt;() {
+    @Override
+    public void call(String s) {
+        System.out.println(s);
+    }
+});
+</code></pre>
+</div>
+
+<p>之后由于时间精力有限,也就没有再深入学习RxJava。但是RxJava的一些疑问点还是一直存留在脑海中。不明白的始终还是不明白。直到有一天看到了一篇关于<a href="http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html?from=timeline&amp;isappinstalled=0">Lambda</a>的文章。才豁然开朗,然后再对RxJava二进宫。果然事半功倍,很快就掌握了RxJava基础。所以Lambda是RxJava的基础是成立的。</p>
+
+<p>那么什么是Lambda表达式呢？</p>
+
+<p>我们在写Android程序或者GUI程序时,按钮的点击事件代码是信手拈来</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Button clickButton = 初始化button;
+clickButton.setOnClickListener(new OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        System.out.println("你点击了按钮");
+    }
+});
+</code></pre>
+</div>
+
+<p>Java8加入了对Lambda表达式的支持,上面代码的Lambda表达式为</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Button clickButton = 初始化button;
+clickButton.setOnClickListener((View v)-&gt;System.out.println("你点击了按钮");
+</code></pre>
+</div>
+
+<p>Lambda表达式是多么的简洁原本七行的代码用两行代码就轻轻松松搞定.(View v)可以将类型省略掉,因为v类型可以自动推倒</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Button clickButton = 初始化button;
+clickButton.setOnClickListener((View v)-&gt;System.out.println("你点击了按钮");
+</code></pre>
+</div>
+
+<p>上述Lamda是Android内置的函数,那么我们如何编写属于自己的Lambda表达式下面我们将通过一个实例来一步步讲解</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>假设我们有一个Person类,定义如下
+public  class Person{
+    public enum Sex{
+        MALE,FEMALE
+    }
+    String name;
+    LocalDate birthday;
+    Sex gender;
+    String emailAddress;
+    
+    public int getAge(){
+        // ...
+    }
+    
+    //打印Person的信息
+    public void printPerson(){
+        // ...
+    }
+} 现在我们有一个Person的集合List&lt;Person&gt; roster。我们要在roster中打印出符合某些条件的Person的信息有如下场景
+</code></pre>
+</div>
+
+<h2 id="section-1">1.打印出年纪大于18岁的人的信息,我们可能会编写如下代码</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//函数定义
+public static void printPersonOlderThan(List&lt;Person&gt; roster,int age){
+    for(Person p:roster){
+        if(p.getAge()&gt;age){
+            p.printPerson();
+        }
+    }
+}
+//函数调用
+List&lt;Person&gt; roster = ...;
+printPersonOlder(roster,18);
+</code></pre>
+</div>
+
+<h2 id="section-2">2.打印出18到25岁的人的信息,然后我们添加一个方法</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//函数定义
+public static void printPersonsWithinAgeRange(List&lt;Person&gt; roster, int low, int high){
+    for (Person p : roster) {
+        if (low &lt;= p.getAge() &amp;&amp; p.getAge() &lt; high) {
+            p.printPerson();
+        }
+    }
+}
+//函数调用
+List&lt;Person&gt; roster = ...;
+printPersonsWithinAgeRange(roster,18，25);
+</code></pre>
+</div>
+
+<h2 id="section-3">3.通过前面两个例子我们发现如果需要查找符合新的条件的人的信息时就需要添加新的方法。于是我们决定使用接口来做判断</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>public static void printPersons(
+    List&lt;Person&gt; roster, CheckPerson tester) {
+        for (Person p : roster) {
+            if (tester.test(p)) {
+                p.printPerson();
+            }
+    }
+}
+//定义接口
+interface CheckPerson {
+    boolean test(Person p);
+}   
+//寻找18岁到25之间的男性
+class CheckPersonEligibleForSelectiveService implements CheckPerson {
+    public boolean test(Person p) {
+        return p.gender == Person.Sex.MALE &amp;&amp;
+            p.getAge() &gt;= 18 &amp;&amp;
+            p.getAge() &lt;= 25;
+     }
+}
+//具体调用
+printPersons(roster, new CheckPersonEligibleForSelectiveService());
+</code></pre>
+</div>
+
+<h2 id="section-4">4. 使用匿名内部类</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>printPersons(roster, new CheckPersonEligibleForSelectiveService());
+#等价于
+printPersons(roster,new CheckPerson() {
+    public boolean test(Person p) {
+        return p.getGender() == Person.Sex.MALE
+            &amp;&amp; p.getAge() &gt;= 18
+            &amp;&amp; p.getAge() &lt;= 25;
+    }
+});
+</code></pre>
+</div>
+
+<h2 id="lambda">5.使用Lambda表达式</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>printPersons(
+    roster,
+    (Person p) -&gt; p.getGender() == Person.Sex.MALE
+                  &amp;&amp; p.getAge() &gt;= 18
+                  &amp;&amp; p.getAge() &lt;= 25
+);
+</code></pre>
+</div>
+
+<h2 id="predicate">6.使用更通用的Predicate</h2>
+
+<p>假设我们现在有个Teacher类,我们也需要根据一些条件打印Teacher的一些信息。我们可能会定义一个接口</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//定义接口
+interface CheckTeacher {
+    boolean test(Teacher t);
+} 其实我们发现CheckTeacher和CheckPerson的定义其实完全一样,完全可以用泛型定义成一个接口。所以Java类库考虑到这点定义了Predicate
+
+interface Predicate&lt;T&gt; {
+    boolean test(T t);
+} 于是函数定义变成了
+
+public static void printPersonsWithPredicate(List&lt;Person&gt; roster, Predicate&lt;Person&gt; tester) {
+    for (Person p : roster) {
+        if (tester.test(p)) {
+             p.printPerson();
+        }
+    }
+} 函数调用依然不变
+
+printPersonsWithPredicate(
+    roster,
+    p -&gt; p.getGender() == Person.Sex.MALE
+        &amp;&amp; p.getAge() &gt;= 18
+        &amp;&amp; p.getAge() &lt;= 25
+);
+</code></pre>
+</div>
+
+<h2 id="comsumercomsumer">7.使用Comsumer,Comsumer源码如下</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>@FunctionalInterface
+public interface Consumer&lt;T&gt; {
+    /**
+     * Performs this operation on the given argument.
+     *
+     * @param t the input argument
+     */
+    void accept(T t);
+    /**
+     * Returns a composed {@code Consumer} that performs, in sequence, this
+     * operation followed by the {@code after} operation. If performing either
+     * operation throws an exception, it is relayed to the caller of the
+     * composed operation.  If performing this operation throws an exception,
+     * the {@code after} operation will not be performed.
+     *
+     * @param after the operation to perform after this operation
+     * @return a composed {@code Consumer} that performs in sequence this
+     * operation followed by the {@code after} operation
+     * @throws NullPointerException if {@code after} is null
+     */
+    default Consumer&lt;T&gt; andThen(Consumer&lt;? super T&gt; after) {
+        Objects.requireNonNull(after);
+        return (T t) -&gt; { accept(t); after.accept(t); };
+    }
+} 接下来我们重新定义printPersons方法
+
+//注意我们这里不在是printPersons 因为通过使用Consume我们可以在查找到符合条件的对象后我们可以自定义如何处理这些对象
+//我们不仅仅局限于打印出这些人的信息这样一个动作了
+public static void processPersons(List&lt;Person&gt; roster,Predicate&lt;Person&gt; tester, Consumer&lt;Person&gt; block) {
+    for (Person p : roster) {
+        if (tester.test(p)) {
+            block.accept(p);
+        }
+    }
+}
+//调用如下
+List&lt;Person&gt; roster = ...;
+processPerson(roster,//第一个参数
+              (Person p)-&gt;{p.getAge()&gt;18;},//第二个参数
+              (Person p)-&gt;{//第三个参数
+                            p.printPerson();
+                            System.out.println("还可以做任何额外")
+                            }
+            );
+</code></pre>
+</div>
+
+<h2 id="personemail">8.上面的例子都是打印Person的全部信息,那如果我只想打印出符合条件的人的Email该怎么办,有两种办法</h2>
+<p>第一种 直接将7中的最后一个参数改成 (Person p)-&gt;System.out.println(p.getEmailAddress())
+第二种 在block.accept(p) 想办法将p 变成String</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>if (tester.test(p)) {
+   //在这里我们应该想办法获取到p的Email
+    block.accept(p);
+ }
+ 将这些改成
+ if (tester.test(p)) {
+    String email = p.getEmailAddress();
+    block.accept(email);
+ }
+ 但是如果都是这样写的话那么代码的侵入性太强了,Java提供了Function&lt;T,R&gt;接口用来转换,跟RxJava的map方法是不是有点像
+ 完整定义如下
+ public static &lt;X, Y&gt; void processElements(Iterable&lt;X&gt; source,Predicate&lt;X&gt; tester,Function &lt;X, Y&gt; mapper,
+                                                Consumer&lt;Y&gt; block) {
+    for (X p : source) {
+        if (tester.test(p)) {
+            Y data = mapper.apply(p);
+            block.accept(data);
+        }
+     }
+} 
+调用如下
+processElements(roster,//第一个参数
+                (Person p)-&gt;p.getAge()&gt;18,//第二个参数
+                (Persion p)-&gt;p.getEmailAddress(),//第三个参数,此时已经将Person转换成String了
+                (String s)-&gt;System.out.println(s),//第四个参数,s的类型已经转换成String了
+                );
+</code></pre>
+</div>
+
+<h2 id="javastream">9.进一步精简。上述我们发现函数式编程会导致有很多匿名内部对象作为参数,代码可读性不强,容易出错误。Java通过Stream解决这一个问题</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>roster
+    .stream()
+    .filter(p-&gt;p.getAge()&gt;18)//等价于8中的第二个参数
+    .map(p-&gt;p.getEmailAddress())//等价于8中的第三个参数
+    .forEach(email-&gt;System.out.println(email));//等价于8中的第四个参数
+</code></pre>
+</div>
+
+<p>我们最终看一个RxJava的例子,读者可以对比例子9</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Integer[] list = {1,2,3,4,5};
+Observable
+    .from(list)
+    .filter(integer-&gt;integer%2==0)//挑选出偶数
+    .map(integer -&gt; "number is"+integer)//转换成String
+    .subscribe(s-&gt;System.out.println(s));//相当于forEach(s-&gt;System.out.println(s));
+    //forEach是同步的 subscribe是异步的
+</code></pre>
+</div>
+
+<h1 id="section-5">总结</h1>
+<p>第一次写文章,不对之处望指正</p>
+
+      </article>
+      <hr>
+        <div class="bdsharebuttonbox">
+            <a href="#" class="bds_more" data-cmd="more"></a>
+            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+            <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+            <a href="#" class="bds_fbook" data-cmd="fbook" title="Share to Facebook"></a>
+            <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+        </div>
+        <script>
+            window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    </div>
+	
+    <!-- duoshuo.com javascript include code. -->    
+    
+    <!-- disqus.com javascript include code. -->
+	
+    <div class="post-area post comment">
+        <div id="disqus_thread"></div>
+    </div>
+	<script>
+		var disqus_config = function () {
+			this.page.url = "http://lizijin.github.io/2016/03/19/RxJava-And-Lambda/"; 
+			this.page.identifier = "/2016/03/19/RxJava-And-Lambda"; 
+		};
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = '//lizijin.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	
+    
+  </div>
+  
+  <div id="content" class="col-sm-3">
+    <!-- <div id="myAffix" class="shadow-bottom-center hidden-xs" data-spy="affix" data-offset-top="0" data-offset-bottom="-20"> -->
+    <div id="myAffix" class="shadow-bottom-center hidden-xs" >
+      <div class="categories-list-header">
+        Content
+      </div>
+      <div class="content-text"></div>
+    </div>
+  </div>
+  
+</div>
+    </div>
+
+    
+    <div id="top" data-toggle="tooltip" data-placement="left" title="back to top">
+      <a href="javascript:;">
+        <div class="arrow"></div>
+        <div class="stick"></div>
+      </a>
+    </div>
+
+    <footer class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <a href="mailto:549974268@qq.com"><span class="glyphicon glyphicon-envelope"></span> 549974268@qq.com</a>
+        <span class="point"> · </span>
+        
+          <a href="https://github.com/lizijin">
+            <span class="icon">
+              <svg viewBox="0 0 16 16">
+                <path fill="#aaa" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+            Github
+            <!-- <span>lizijin</span> -->
+          </a>
+          
+          <span class="point"> · </span>
+          <span><a href="https://github.com/lizijin/lizijin.github.io/blob/master/_posts/Rxjava/2016-3-19-RxJava-And-Lambda.md">View source</a></span>
+          <span class="point"> · </span>
+          <span><a class="newpost" href="javascript:;">New post</a></span>
+		  <span class="point"> · </span>
+          <span><a href="/feed.xml">RSS</a></span>
+          <span class="point"> · </span>
+          <span>&copy; 2016 姜斌</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script type="text/javascript">
+    function OnClickNewPost()
+    {
+        var title = prompt("Please enter title of your post");
+        if (title!=null){
+            title = title.replace(" ", "-");
+            var currentdate = new Date();
+            var urlNewPage = "https://github.com/lizijin/lizijin.github.io/new/master?filename=_posts/" 
+                + currentdate.getFullYear() + "-" + (currentdate.getMonth()+1) + "-" + currentdate.getDate() + "-" + title + ".md";
+                
+            var defaultText =  [
+                '---',
+                'layout: post',
+                'comments: true',
+                'categories: diary',
+                '---',
+                '## Title',
+                'text'
+                ].join('\n');
+            urlNewPage += "&value=" + encodeURIComponent(defaultText);
+            window.open(urlNewPage);
+        }
+    }
+    
+    $(function() {
+      // CreateNewPostLinks
+      $('.newpost').each(function(){
+          $(this).click(OnClickNewPost);
+      });
+    });
+</script>
+  
+  </body>
+</html>
