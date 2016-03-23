@@ -20,7 +20,7 @@ newsourceroot: https://github.com/mahuafactory/mahuafactory.github.io/new/master
 # for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com.
 # disqus.com commenting system. please note that it is exclusive with duoshuo.com
 disqus_shortname: mahuafactory
-disqus_url: "http://mahuafactory.github.io"
+disqus_url: "http://mahuafactory.disqus.com"
 #########################################
 
 # Build settings
