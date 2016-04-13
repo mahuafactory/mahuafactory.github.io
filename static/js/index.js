@@ -6,6 +6,7 @@ $(document).ready(function() {
     categoryDisplay();
     generateContent();
     backToTop();
+    tableProcess();
 });
 
 /**
@@ -144,4 +145,11 @@ function generateContent() {
         });*/
     }
     console.log("myAffix!!!");
+}
+
+/**
+ * 处理表格的样式
+ */
+function tableProcess() {
+    $('table').addClass('table table-bordered table-striped');
 }
