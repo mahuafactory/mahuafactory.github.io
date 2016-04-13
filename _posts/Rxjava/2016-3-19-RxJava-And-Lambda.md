@@ -35,7 +35,7 @@ categories: RxJava
 
 我们在写Android程序或者GUI程序时,按钮的点击事件代码是信手拈来
 
-    Button clickButton = 初始化button;
+        Button clickButton = 初始化button;
     clickButton.setOnClickListener(new OnClickListener() {
         @Override
         public void onClick(View v) {
