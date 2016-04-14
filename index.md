@@ -2,4 +2,4 @@
 layout: frontpage
 ---
 
-That man is the richest whose pleasures are the cheapest!
+The best preparation for tomorrow is doing your best today!
