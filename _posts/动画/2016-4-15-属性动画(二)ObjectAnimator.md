@@ -3,8 +3,8 @@ layout: post
 comments: true
 categories: 动画
 ---
-### 一 概述###
-  属性动画从API 11引入，比视图动画更加强大，用官方的话说，属性动画可以改变任何事物。而视图动画仅仅是动画。视图动画基类是`android.view.animation.Animation`，而属性动画基类是`android.animation.Animator`
+
+
 
   如下是属性动画的继承关系：
   

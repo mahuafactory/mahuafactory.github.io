@@ -25,7 +25,7 @@ categories: 动画
 
   完成了上面3步计算，最后使用得到的属性值来改变需要改变的对象，就可以得到想要的动画了。
 
-  首先，先来了解属性动画中两个常用类`ValueAnimator`以及`ObjectAnimator`的用法。
+  首先，先来了解属性动画中两个常用类`ValueAnimator`以及`ObjectAnimator`的用法。以及`PropertyValuesHolder`和`Keyframe`。
 
 ### 二 ValueAnimator###
 
@@ -71,6 +71,61 @@ categories: 动画
     }
 
   继承`TypeEvaluator`，并指定合适的泛型，随后通过`evaluate`方法返回指定对象。同时通过`ValueAnimator`的`setEvaluator(TypeEvaluator value)`方法指定自定义的`TypeEvaluator`即可。
+
+
+### 三 ObjectAnimator###
+
+  `ValueAnimator`并不能直接操作属性，需要在回调中自行处理，而`ValueAnimator`的子类`ObjectAnimator`则做了改进，可以直接更改属性值，可以省下一些代码。
+
+    ObjectAnimator animator = ObjectAnimator.ofFloat(imageView,"alpha",1,0,1);  
+	animator.setDuration(1000);  
+	animator.start();  
+
+  `ObjectAnimator`的`ofFloat`方法，和`ValueAnimator`有所不同，多了一个参数，传值为`alpha`，其实这个参数是需要更改的属性名。该属性必须有set方法，并按照驼峰式的命名方式命名。每次回调，会根据反射自定将新的属性值使用set方法设置给对应属性。从而产生动画。
+
+  其他的用法基本和`ValueAnimator`用法类似。
+
+### 四 PropertyValuesHolder&Keyframe###
+
+  这个类主要用于保存动画所需的属性值，通过`ValueAnimator`以及`ObjectAnimator`的`ofFloat`等方法构造的动画，在内部也是将参数封装为`PropertyValuesHolder`实例来保存所需的属性值。因此，使用上诉两个类构造动画的时候，也可以使用`ofPropertyValuesHolder(PropertyValuesHolder... values)` 方法直接传入`PropertyValuesHolder`实例来构造动画。
+
+  创建`PropertyValuesHolder`实例有如下的方法。
+
+    public static PropertyValuesHolder ofFloat(String propertyName, float... values)  
+	public static PropertyValuesHolder ofInt(String propertyName, int... values)   
+	public static PropertyValuesHolder ofObject(String propertyName, TypeEvaluator evaluator,Object... values)  
+	public static PropertyValuesHolder ofKeyframe(String propertyName, Keyframe... values)
+
+  前三个方法和`ObjectAnimator`的使用基本相同，而第四个方法是`ObjectAnimator`没有的，它接收`Keyframe`的实例。
+
+  `Keyframe`是关键帧，关键帧的概念有点类似于补间动画，也就是指定一些关键的帧，然后让系统自动补齐其余的帧。它也有`ofInt`,`ofFloat`,`ofObject`方法来构建实例，使用关键帧创建动画的示例代码如下：
+
+	 Keyframe frame0 = Keyframe.ofFloat(0f, 1);
+     Keyframe frame1 = Keyframe.ofFloat(0.5f, 2);
+     frame1.setInterpolator(new AnticipateOvershootInterpolator());
+     Keyframe frame3 = Keyframe.ofFloat(1, 3);
+     PropertyValuesHolder frameHolder = PropertyValuesHolder.ofKeyframe("scaleX", frame0, frame1, frame3);
+     PropertyValuesHolder frameHolder2 = PropertyValuesHolder.ofKeyframe("scaleY", frame0, frame1, frame3);
+     Animator animator = ObjectAnimator.ofPropertyValuesHolder(mTextView, frameHolder,frameHolder2);
+     animator.setDuration(5000);
+     animator.setInterpolator(new LinearInterpolator());
+     animator.start();
+
+  `public static Keyframe ofFloat(float fraction, float value)`有两个参数，第一个代表当前动画的时间进度，第二个代表动画的完成率，也就是经过插值器计算后得到的值。理所当然，它就可以设置插值器，可以看到上面的代码，`frame1`设置的插值器，那么这个插值器实际是在`frame0`到`frame1`之间起作用的，也就是说，插值器在当前帧和前一帧之间起作用。
+
+  如果animator和frame都设置了插值器，那么谁会起作用呢，经过如上代码的实验，frame设置了插值器后，将不受animator插值器的影响。
+
+  ![frame插值器](/icons/animator_frame_interpolator.gif)
+
+  从图中可以看出，很明显有`Anticipate`加速器的效果，而不是animator设置的`LinearInterpolator`加速器。
+
+  
+
+  
+
+  
+
+
 
 
 
