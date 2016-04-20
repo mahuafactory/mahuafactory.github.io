@@ -128,3 +128,5 @@ categories: 动画
     Animator animator1 = ObjectAnimator.ofPropertyValuesHolder(mLinear, holder1,holder2,holder3,holder4,holder5);
     layoutTransition.setAnimator(LayoutTransition.CHANGE_APPEARING, animator1);
     mLinear.setLayoutTransition(layoutTransition);  
+
+  使用CHANGE_APPEARING来指定了其他条目在新条目加入时的动画，不过跟指定APPEARING动画不同的是，这类动画必须使用PropertyValuesHolder来构建，并且left，top必须要指定，否则无效。这是需要注意的一点。
