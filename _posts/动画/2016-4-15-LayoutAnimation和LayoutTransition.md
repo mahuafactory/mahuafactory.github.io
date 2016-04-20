@@ -5,7 +5,7 @@ categories: 动画
 ---
 ### 一 概述###
 
-  LayoutAnimation和LayoutTransation都是运用于容器的，作用于他们的child。
+  LayoutAnimation和LayoutTransition都是运用于容器的，作用于他们的child。
 
   这里于LayoutAnimation类似的还有gridLayoutAnimation。
 
@@ -89,6 +89,42 @@ categories: 动画
   同样的，也可以使用纯代码的方式实现，代码中需要使用`GridLayoutAnimationController`,其余的和上面的LayoutAnimation基本一致。这里就不写示例了。
 
 
-### 二 LayoutTransation###
+### 二 LayoutTransition###
 
   和属性动画一起在API 11的时候加入。它使用的是属性动画。主要负责容器内item添加删除时候的效果。
+  先看一下效果：
+
+  ![animation](/icons/animation/layouttransitiondefault.gif)
+
+  这里是layoutransition的默认效果，仅仅是通过xml开启了容器内item增删的动画。
+  
+  xml中如下：
+ 
+	    <LinearLayout
+        android:animateLayoutChanges="true"
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_add"
+        android:orientation="vertical"/>
+
+  重点在于第一句` android:animateLayoutChanges="true"`指定开启了layout变化的动画，可以看到，默认的动画有透明度变化，以及其他条目的移动效果。
+
+  如果不想使用默认效果，那么就需要使用Layouttransition来自定义。
+  先看一个自定义的效果，这里button加入的时候，有一个rotation效果。并且其他条目有一个平移效果。
+
+  ![animation](/icons/animation/layouttransitioncustom.gif)
+
+  代码如下：
+
+    LayoutTransition layoutTransition = new LayoutTransition();
+    ObjectAnimator animator = ObjectAnimator.ofFloat(mLinear, "rotationX", 0, 360);
+    layoutTransition.setAnimator(LayoutTransition.APPEARING, animator);
+    PropertyValuesHolder holder1 = PropertyValuesHolder.ofInt("left", 0, 0);
+    PropertyValuesHolder holder2 = PropertyValuesHolder.ofInt("top", 0, 0);
+    PropertyValuesHolder holder3 = PropertyValuesHolder.ofInt("right", 0, 0);
+    PropertyValuesHolder holder4 = PropertyValuesHolder.ofInt("bottom", 0, 0);
+    PropertyValuesHolder holder5 = PropertyValuesHolder.ofFloat("translationX", 0, 500,0);
+    Animator animator1 = ObjectAnimator.ofPropertyValuesHolder(mLinear, holder1,holder2,holder3,holder4,holder5);
+    layoutTransition.setAnimator(LayoutTransition.CHANGE_APPEARING, animator1);
+    mLinear.setLayoutTransition(layoutTransition);  
